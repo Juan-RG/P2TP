@@ -8,7 +8,8 @@
 #include "../Operador.h"
 
 class Suma : Operador {
-
+public:
+    float operacion(float n1, float n2); //cada clase hija implementara la operacion.
 };
 
 

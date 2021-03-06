@@ -8,5 +8,9 @@
 #include "../Numero.h"
 
 class Constante : Numero {
-
+private:
+    float varaible;
+public:
+    Constante(float variable);
+    float getDato() const override;
 };

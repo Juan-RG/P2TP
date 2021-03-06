@@ -4,7 +4,7 @@
 
 #pragma Caracter
 
-class Caracter {
+class  Caracter {
 
 };
 

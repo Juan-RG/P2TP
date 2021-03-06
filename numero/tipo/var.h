@@ -8,5 +8,9 @@
 #include "../Numero.h"
 
 class var : Numero {
-
+private:
+    char varaible;
+public:
+    var(char variable);
+    char getDato() const override;
 };

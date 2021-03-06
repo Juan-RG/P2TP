@@ -7,6 +7,9 @@
 
 #include "../Caracter.h"
 
-class Numero : Caracter {
 
+class Numero : Caracter {
+public:
+
+    virtual float getDato() const override;
 };

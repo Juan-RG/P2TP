@@ -3,3 +3,8 @@
 //
 
 #include "Constante.h"
+
+
+int Constante::getVariable() const {
+    return varaible;
+}

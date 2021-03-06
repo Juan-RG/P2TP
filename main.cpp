@@ -1,5 +1,6 @@
 #include "expression.h"
 #include "symboltab.h"
+#include "prueba.h"
 #include <iostream>
 
 using namespace std;
@@ -14,6 +15,8 @@ int main()
     pair.second = numero;
     syms.insert(pair);
     cout << syms.begin()->first;
+
+    syms.
 
     // Define en la tabla los valores de
     // a = 7.0
