@@ -2,7 +2,7 @@
 // Created by Juan on 06/03/2021.
 //
 
-#pragma Resta
+#pragma once
 
 
 #include "../Operador.h"

@@ -2,12 +2,12 @@
 // Created by Juan on 06/03/2021.
 //
 
-#pragma Constante
+#pragma once
 
 
 #include "../../Caracter.h"
 
-class Constante : Caracter {
+class Constante : public Caracter {
 private:
     float constante;
 public:

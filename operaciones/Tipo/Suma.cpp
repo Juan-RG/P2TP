@@ -4,10 +4,10 @@
 
 #include "Suma.h"
 
-Suma::Suma(string op): Operador(op) {
+
+Suma::Suma(string op) : Operador(op){
 
 }
-
 float Suma::eval(const SymbolTab &syms) {
 
     return  (izq->eval(syms) + der->eval(syms));

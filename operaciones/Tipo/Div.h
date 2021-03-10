@@ -2,11 +2,11 @@
 // Created by Juan on 06/03/2021.
 //
 
-#pragma Div
+#pragma once
 
 #include "../Operador.h"
 
-class Div : public Operador {
+class Div : Operador {
 public:
     virtual float eval(const SymbolTab &syms) override;
 };

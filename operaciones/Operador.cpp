@@ -3,6 +3,14 @@
 //
 
 #include "Operador.h"
-Operador::Operador(string op): operador(op) {
 
+Operador::Operador(string op) : simbolo(op){
+}
+
+void Operador::setDer(Caracter *CD) {
+    der = CD;
+}
+
+void Operador::setIzq(Caracter *CI) {
+    izq = CI;
 }

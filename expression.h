@@ -1,4 +1,4 @@
-#pragma Expression
+#pragma once
 
 #include <iostream>
 #include "symboltab.h"
