@@ -11,12 +11,12 @@
 class Operador : public Caracter {
 
 protected:
-    char simbolo;
+    string operador;
     Caracter* der;
     Caracter* izq;
 public:
 
-
+    Operador(string op);
     virtual float eval(const SymbolTab &syms) override;
 
 };

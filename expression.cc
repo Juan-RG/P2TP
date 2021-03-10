@@ -1,5 +1,6 @@
 #include "expression.h"
 #include "operaciones/Operador.h"
+#include "operaciones/Tipo/Suma.h"
 #include <iostream>
 #include <sstream>
 #include <stack>
@@ -21,6 +22,8 @@ void Expression::parse(const string &s) {
 
     while (ss >> tok) {
         if (tok == "+") {
+            Caracter* a = new Suma("+");
+            stk.push(a);
             // Apilar suma
             //...
         } else if (tok == "-") {

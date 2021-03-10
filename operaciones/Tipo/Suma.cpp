@@ -4,6 +4,9 @@
 
 #include "Suma.h"
 
+Suma::Suma(string op): Operador(op) {
+
+}
 
 float Suma::eval(const SymbolTab &syms) {
 

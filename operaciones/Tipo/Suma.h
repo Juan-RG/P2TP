@@ -7,8 +7,9 @@
 
 #include "../Operador.h"
 
-class Suma : Operador {
+class Suma : public Operador {
 public:
+    Suma(string op);
     virtual float eval(const SymbolTab &syms) override;
 };
 

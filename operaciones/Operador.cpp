@@ -3,3 +3,6 @@
 //
 
 #include "Operador.h"
+Operador::Operador(string op): operador(op) {
+
+}
