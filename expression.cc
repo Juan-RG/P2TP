@@ -17,11 +17,11 @@ void Expression::parse(const string &s) {
     //Operador *nodoRaiz;
     // Pila de términos
     // Consulta el tipo de datos 'stack' de la STL
-    //stack<Caracter> stk;
+    stack<Caracter> stk;
 
     while (ss >> tok) {
         if (tok == "+") {
-            //Caracter* a = new Suma("+");
+            //Suma a("+");
             //stk.push(a);
             // Apilar suma
             //...
