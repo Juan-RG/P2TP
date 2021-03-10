@@ -4,7 +4,12 @@
 
 #pragma Caracter
 
-class  Caracter {
+#include "symboltab.h"
+
+class Caracter {
+
+public:
+    virtual float eval(const SymbolTab& syms) = 0;
 
 };
 

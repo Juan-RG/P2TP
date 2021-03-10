@@ -9,5 +9,5 @@
 
 class Mult : Operador  {
 public:
-    float operacion(float n1, float n2); //cada clase hija implementara la operacion.
+    virtual float eval(const SymbolTab &syms) override;
 };

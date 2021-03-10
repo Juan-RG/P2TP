@@ -5,12 +5,13 @@
 #pragma Constante
 
 
-#include "../Numero.h"
+#include "../../Caracter.h"
 
-class Constante : Numero {
+class Constante : Caracter {
 private:
-    float varaible;
+    float constante;
 public:
-    Constante(float variable);
-    float getDato() const override;
+    Constante(float constante);
+
+    float eval(const SymbolTab &syms) override;
 };

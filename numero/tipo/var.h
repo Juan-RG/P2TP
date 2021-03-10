@@ -4,13 +4,13 @@
 
 #pragma var
 
+#include "../../Caracter.h"
 
-#include "../Numero.h"
-
-class var : Numero {
+class var : public Caracter{
 private:
-    char varaible;
+    string variable;
 public:
-    var(char variable);
-    char getDato() const override;
+    var(string variable_);
+    float eval(const SymbolTab &syms) override;
+
 };

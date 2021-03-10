@@ -5,6 +5,10 @@
 #include "Constante.h"
 
 
-int Constante::getVariable() const {
-    return varaible;
+Constante::Constante(float _constante): constante(_constante){
+}
+
+float Constante::eval(const SymbolTab &syms) {
+
+    return constante;
 }

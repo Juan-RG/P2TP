@@ -3,3 +3,9 @@
 //
 
 #include "Suma.h"
+
+
+float Suma::eval(const SymbolTab &syms) {
+
+    return  (izq->eval(syms) + der->eval(syms));
+}

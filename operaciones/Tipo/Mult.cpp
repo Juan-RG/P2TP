@@ -3,3 +3,8 @@
 //
 
 #include "Mult.h"
+
+float Mult::eval(const SymbolTab &syms) {
+
+    return  (izq->eval(syms) * der->eval(syms));
+}

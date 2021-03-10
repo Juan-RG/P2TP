@@ -3,3 +3,8 @@
 //
 
 #include "Resta.h"
+
+float Resta::eval(const SymbolTab &syms) {
+
+    return  (izq->eval(syms) - der->eval(syms));
+}

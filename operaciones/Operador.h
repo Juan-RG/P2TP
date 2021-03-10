@@ -5,14 +5,19 @@
 #pragma Operador
 
 //#include "../Caracter.h"  toDo: Preguntar por que da error
-#include "../numero/Numero.h"
 
-class Operador : Caracter {
-private:
+#include "../Caracter.h"
+
+class Operador : public Caracter {
+
+protected:
     char simbolo;
+    Caracter* der;
+    Caracter* izq;
 public:
-    Operador(char simbolo);
-    virtual float operacion(float n1, float n2); //cada clase hija implementara la operacion.
+
+
+    virtual float eval(const SymbolTab &syms) override;
 
 };
 
