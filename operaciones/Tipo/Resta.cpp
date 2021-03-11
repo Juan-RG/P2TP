@@ -4,8 +4,7 @@
 
 #include "Resta.h"
 
-float Resta::eval(const SymbolTab &syms) {
-
+float Resta::eval(const SymbolTab &syms) const{
     return  (izq->eval(syms) - der->eval(syms));
 }
 

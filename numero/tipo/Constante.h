@@ -4,14 +4,18 @@
 
 #pragma once
 
-
 #include "../../Caracter.h"
 
 class Constante : public Caracter {
+
 private:
+
     float constante;
+
 public:
+
     Constante(float constante_);
-    float eval(const SymbolTab &syms) override;
-    string to_String() override;
+    float eval(const SymbolTab &syms) const override;
+    string to_String() const override;
+
 };

@@ -6,17 +6,19 @@
 
 #include "symboltab.h"
 
-class Caracter {    //TODO: yo creo que hay que meterle alguna variable o algo, porque sino nose como hacer pop()
-                    //TODO: y diferenciar entre var y cte
+class Caracter {
+
 protected:
-    int prioridad; //las + y - tendran = 1; las * y / tendran = 2; y las var =3 ??
+
+    int prioridad; //las + y - tendran = 1; las * y / tendran = 2
 
 public:
 
-    Caracter(int priodad);
-    virtual float eval(const SymbolTab& syms);
-    virtual string to_String();
+    Caracter(int prioridad_);
+    virtual float eval(const SymbolTab& syms) const;
+    virtual string to_String() const;
     int getPrioridad() const;
+
 };
 
 

@@ -4,12 +4,12 @@
 
 #include "var.h"
 
-var::var(string variable_): Caracter(3), variable(variable_){}
+var::var(string variable_): Caracter(3), variable(variable_){ }
 
-float var::eval(const SymbolTab &syms) {
+float var::eval(const SymbolTab &syms) const{
     return syms.find(variable)->second;
 }
 
-string var::to_String() {
-    return variable;
+string var::to_String() const{
+    return " " + variable + " ";
 }

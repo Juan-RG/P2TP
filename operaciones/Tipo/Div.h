@@ -7,10 +7,12 @@
 #include "../Operador.h"
 
 class Div : public Operador {
+
 public:
 
     Div(Caracter* izq_, Caracter* der_);
-    virtual float eval(const SymbolTab &syms) override;
+    virtual float eval(const SymbolTab &syms) const override;
+
 };
 
 

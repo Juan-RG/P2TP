@@ -1,48 +1,25 @@
 #include "expression.h"
-#include "symboltab.h"
-
-#include "operaciones/Tipo/Suma.h"
-#include "numero/tipo/Constante.h"
 
 #include <iostream>
 
 using namespace std;
 
-int main()
-{
+int main(){
+
     SymbolTab syms;
-     //Define en la tabla los valores de
-     float a = 7.0;
-     float b = 2.0;
+    //Define en la tabla los valores de las variables:
+    float a = 7.0;
+    float b = 2.0;
 
+    pair<string,float>pareja;
 
-
-     pair<string,float>pareja;
-     pareja.first = "a";
-     pareja.second = a;
-     syms.insert(pareja);
+    pareja.first = "a";
+    pareja.second = a;
+    syms.insert(pareja);
 
     pareja.first = "b";             //Todo: mirar el nombre
     pareja.second = b;
     syms.insert(pareja);
-
-
-    //Consulta el tipo 'map' de la STL
-
-     /*Suma nodo1("+");
-     Suma nodo4("+");
-
-     Constante nodo2(2);
-     Constante nodo5(7);
-     nodo4.setIzq(&nodo2);
-     nodo4.setDer(&nodo5);
-     Constante nodo3(3);
-
-     nodo1.setDer(&nodo4);
-     nodo1.setIzq(&nodo3);
-
-     cout << nodo1.eval(syms) << "\n";*/
-
 
     // 3 + 2 *  5 = 13
     Expression e1("3 2 5 * +");
@@ -69,7 +46,7 @@ int main()
     cout << e5 << " = " << e5.eval(syms) << endl;
     cout << endl;
 
-    // (1 + c) * 2 ERROR!!! 'c' no esta definida
+    // (1 + c) * 2 ERROR!!! 'c' no esta definida //TODO: hay que poner alguna condicion de no existe var???
     Expression e6("1 c + 2 *");
     cout << e6 << " = " << e6.eval(syms) << endl;
     cout << endl;

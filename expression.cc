@@ -3,21 +3,17 @@
 #include "operaciones/Tipo/Resta.h"
 #include "operaciones/Tipo/Div.h"
 #include "operaciones/Tipo/Mult.h"
-#include "operaciones/Operador.h"
 
 #include "numero/tipo/Constante.h"
 #include "numero/tipo/var.h"
 
-#include <iostream>
 #include <sstream>
-//#include <stack>
 
 using namespace std;
 
 Expression::Expression(const std::string &s) {
     parse(s);
 }
-
 
 void Expression::parse(const string &s) {
     istringstream ss(s);

@@ -19,8 +19,8 @@ protected:
 public:
 
     Operador(string simbolo_, Caracter* izq_, Caracter* der_);
-    //virtual float eval(const SymbolTab &syms) override; //TODO: hace falta???
-    string to_String() override;
+    //virtual float eval(const SymbolTab &syms) override;       //TODO: hace falta???
+    string to_String() const override;
 
 };
 

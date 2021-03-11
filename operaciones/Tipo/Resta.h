@@ -4,14 +4,15 @@
 
 #pragma once
 
-
 #include "../Operador.h"
 
 class Resta : public Operador {
+
 public:
 
     Resta(Caracter* izq_, Caracter* der_);
-    virtual float eval(const SymbolTab &syms) override;
+    virtual float eval(const SymbolTab &syms) const override;
+
 };
 
 

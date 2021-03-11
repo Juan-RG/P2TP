@@ -7,10 +7,15 @@
 #include "../../Caracter.h"
 
 class var : public Caracter{
+
 private:
+
     string variable;
+
 public:
+
     var(string variable_);
-    float eval(const SymbolTab &syms) override;
-    string to_String() override;
+    float eval(const SymbolTab &syms) const override;
+    string to_String() const override;
+
 };
