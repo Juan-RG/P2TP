@@ -6,9 +6,9 @@
 
 float Div::eval(const SymbolTab &syms) {
 
-    return  (izq->eval(syms) / der->eval(syms));
+    return  (der->eval(syms) / izq->eval(syms));
 }
 
-Div::Div(Caracter* izq_, Caracter* der_) : Operador("/", izq_, der_){
-
+Div::Div(Caracter* izq_, Caracter* der_): Operador("/", izq_, der_){
+    prioridad = 2;
 }

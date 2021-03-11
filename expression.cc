@@ -18,9 +18,6 @@ Expression::Expression(const std::string &s) {
     parse(s);
 }
 
-/*stack<Caracter> Expression::getPila() const {
-    return stk;
-}*/
 
 void Expression::parse(const string &s) {
     istringstream ss(s);
@@ -31,25 +28,25 @@ void Expression::parse(const string &s) {
             // Apilar suma
             Caracter* der = nullptr;
             Caracter* izq = nullptr;
-            obtenerHijos(&der, &izq);
+            asignarHijos(&der, &izq);
             auto* nodoSuma = new Suma(izq, der);
             stk.push(nodoSuma);
         } else if (tok == "-") {
             Caracter *der = nullptr;
             Caracter *izq = nullptr;
-            obtenerHijos(&der, &izq);
+            asignarHijos(&der, &izq);
             auto* nodoResta = new Resta(izq, der);
             stk.push(nodoResta);
         } else if (tok == "*") {
             Caracter *der = nullptr;
             Caracter *izq = nullptr;
-            obtenerHijos(&der, &izq);
+            asignarHijos(&der, &izq);
             auto* nodoMult = new Mult(izq, der);
             stk.push(nodoMult);
         } else if (tok == "/") {
             Caracter *der = nullptr;
             Caracter *izq = nullptr;
-            obtenerHijos(&der, &izq);
+            asignarHijos(&der, &izq);
             auto* nodoDiv = new Mult(izq, der);
             stk.push(nodoDiv);
         } else {
@@ -70,10 +67,9 @@ void Expression::parse(const string &s) {
     }
     root = stk.top();   // Todo;	root = // cima de la pila
     stk.pop();
-
 }
 
-void Expression::obtenerHijos(Caracter **der, Caracter **izq) {
+void Expression::asignarHijos(Caracter **der, Caracter **izq) {
     *der = stk.top();
     stk.pop();
     *izq = stk.top();
@@ -81,7 +77,6 @@ void Expression::obtenerHijos(Caracter **der, Caracter **izq) {
 }
 
 float Expression::eval(const SymbolTab &syms) const {
-
     return root->eval(syms);
 }
 

@@ -18,6 +18,8 @@ private:
 
 	std::string to_string() const;
 
+    void asignarHijos(Caracter **der, Caracter **izq);
+
 public:
 	// Cnstructores
 	Expression(const std::string& s);
@@ -26,7 +28,7 @@ public:
 
 	friend ostream& operator<<(ostream& os,const Expression& e);
 
-    void obtenerHijos(Caracter **der, Caracter **izq);
+
 };
 
 ostream& operator<<(ostream& os,const Expression& e);

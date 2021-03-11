@@ -21,11 +21,7 @@ public:
     Operador(string simbolo_, Caracter* izq_, Caracter* der_);
     //virtual float eval(const SymbolTab &syms) override; //TODO: hace falta???
     virtual string to_String() override;
-    /*Operador(string op);
 
-
-    void setDer(Caracter* CD);
-    void setIzq(Caracter* CI);*/
 };
 
 
