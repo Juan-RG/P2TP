@@ -5,10 +5,14 @@
 #include "Constante.h"
 
 
-Constante::Constante(float constante_): constante(constante_){
+Constante::Constante(float constante_): Caracter(3), constante(constante_){
 }
 
 float Constante::eval(const SymbolTab &syms) {
 
     return constante;
+}
+
+string Constante::to_String() {
+    return std::to_string(constante);
 }

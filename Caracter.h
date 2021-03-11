@@ -13,9 +13,10 @@ private:
 
 public:
 
-    int getPrioridad() const;
+    Caracter(int priodad);
     virtual float eval(const SymbolTab& syms);
     virtual string to_String();
+    int getPrioridad() const;
 };
 
 

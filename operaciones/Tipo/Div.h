@@ -9,7 +9,7 @@
 class Div : public Operador {
 public:
 
-    //Div(string op);
+    Div(Caracter* izq_, Caracter* der_);
     virtual float eval(const SymbolTab &syms) override;
 };
 

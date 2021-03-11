@@ -13,4 +13,5 @@ private:
 public:
     Constante(float constante_);
     float eval(const SymbolTab &syms) override;
+    string to_String() override;
 };

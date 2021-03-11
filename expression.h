@@ -9,10 +9,10 @@ class Expression
 {
 private:
 	// Raiz del arbol de terminos
-	//???? root;
+	Caracter* root;
 
 	//O le metemos una pila comun aqui o ni idea de como se hace para hacer los toString:
-    stack<Caracter> stk;
+    stack<Caracter*> stk;
 
 	void parse(const std::string& s);
 
@@ -20,14 +20,13 @@ private:
 
 public:
 	// Cnstructores
-	//....
 	Expression(const std::string& s);
-
-   // stack<Caracter> getPila() const;
 
 	float eval(const SymbolTab& syms) const;
 
 	friend ostream& operator<<(ostream& os,const Expression& e);
+
+    void obtenerHijos(Caracter **der, Caracter **izq);
 };
 
 ostream& operator<<(ostream& os,const Expression& e);

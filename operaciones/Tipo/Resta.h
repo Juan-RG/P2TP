@@ -10,7 +10,7 @@
 class Resta : public Operador {
 public:
 
-    //Resta(string op);
+    Resta(Caracter* izq_, Caracter* der_);
     virtual float eval(const SymbolTab &syms) override;
 };
 

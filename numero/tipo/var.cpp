@@ -4,7 +4,7 @@
 
 #include "var.h"
 
-var::var(string variable_): variable(variable_){}
+var::var(string variable_): Caracter(3), variable(variable_){}
 
 float var::eval(const SymbolTab &syms) {
     return syms.find(variable)->second;

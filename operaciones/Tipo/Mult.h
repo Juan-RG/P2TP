@@ -10,6 +10,6 @@
 class Mult : public Operador  {
 public:
 
-    //Mult(string op);
+    Mult(Caracter* izq_, Caracter* der_);
     virtual float eval(const SymbolTab &syms) override;
 };

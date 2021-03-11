@@ -15,7 +15,7 @@
 using namespace std;
 
 Expression::Expression(const std::string &s) {
-    //parse(s);
+    parse(s);
 }
 
 /*stack<Caracter> Expression::getPila() const {
@@ -26,66 +26,71 @@ void Expression::parse(const string &s) {
     istringstream ss(s);
     string tok;
 
-    //Operador *nodoRaiz;
-    // Pila de términos
-    // Consulta el tipo de datos 'stack' de la STL
-    //stack<Caracter> stk;
-    //stk = getPila();
-    //stk = this->stk;
-
-
     while (ss >> tok) {
         if (tok == "+") { //TODO: hay que desapilar dos datos de la pila, para pasarlos como nodos hijos
             // Apilar suma
-            Caracter* c1 = new Caracter(stk.top());
-            Caracter* c2 = new Caracter(stk.top());
-            Suma suma(c1,c2);
-            stk.push(suma);
+            Caracter* der = nullptr;
+            Caracter* izq = nullptr;
+            obtenerHijos(&der, &izq);
+            auto* nodoSuma = new Suma(izq, der);
+            stk.push(nodoSuma);
         } else if (tok == "-") {
-            // Apilar resta
-            /*Resta resta(tok);
-            stk.push(resta);*/
+            Caracter *der = nullptr;
+            Caracter *izq = nullptr;
+            obtenerHijos(&der, &izq);
+            auto* nodoResta = new Resta(izq, der);
+            stk.push(nodoResta);
         } else if (tok == "*") {
-            // Apilar producto
-            /*Mult mult(tok);
-            stk.push(mult);*/
+            Caracter *der = nullptr;
+            Caracter *izq = nullptr;
+            obtenerHijos(&der, &izq);
+            auto* nodoMult = new Mult(izq, der);
+            stk.push(nodoMult);
         } else if (tok == "/") {
-            // Apilar cociente
-            /*Div div(tok);
-            stk.push(div);*/
+            Caracter *der = nullptr;
+            Caracter *izq = nullptr;
+            obtenerHijos(&der, &izq);
+            auto* nodoDiv = new Mult(izq, der);
+            stk.push(nodoDiv);
         } else {
             // Variable o constante
             // Si comienza por un caracter no numerico,
             // es un nombre de variable
             if (isalpha(tok[0])) {
                 // Apilar variable
-                var variable(tok);
+                auto* variable = new var(tok);
                 stk.push(variable);
+
             } else {
-                float f = stof(tok);
                 // Apilar constante
-                Constante cte(f);
-                stk.push(cte);
+                auto* constante = new Constante(stof(tok));
+                stk.push(constante);
             }
         }
     }
+    root = stk.top();   // Todo;	root = // cima de la pila
+    stk.pop();
 
-// Todo;	root = // cima de la pila
+}
+
+void Expression::obtenerHijos(Caracter **der, Caracter **izq) {
+    *der = stk.top();
+    stk.pop();
+    *izq = stk.top();
+    stk.pop();
 }
 
 float Expression::eval(const SymbolTab &syms) const {
-    // Devuelve el resultado de evaluar la expresion
-    return 0;
+
+    return root->eval(syms);
 }
 
 string Expression::to_string() const {
-    // Devuelve la cadena que representa la expresion
-    return "null";
+    return root->to_String();
 }
 
 ostream &operator<<(ostream &os, const Expression &e) {
     os << e.to_string();
-
     return os;
 }
 

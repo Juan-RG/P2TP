@@ -13,5 +13,10 @@ float Caracter::eval(const SymbolTab &syms) {
 }
 
 string Caracter::to_String() {
-    return std::__cxx11::string();
+
+    return "a";
+   // return std::__cxx11::string();
+}
+Caracter::Caracter(int priodad) : prioridad(priodad) {
+
 }
