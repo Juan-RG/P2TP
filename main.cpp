@@ -15,6 +15,8 @@ int main()
      float a = 7.0;
      float b = 2.0;
 
+
+
      pair<string,float>pareja;
      pareja.first = "a";
      pareja.second = a;

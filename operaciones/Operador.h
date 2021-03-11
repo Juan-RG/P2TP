@@ -20,7 +20,7 @@ public:
 
     Operador(string simbolo_, Caracter* izq_, Caracter* der_);
     //virtual float eval(const SymbolTab &syms) override; //TODO: hace falta???
-    virtual string to_String() override;
+    string to_String() override;
 
 };
 

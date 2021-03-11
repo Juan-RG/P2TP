@@ -47,7 +47,7 @@ void Expression::parse(const string &s) {
             Caracter *der = nullptr;
             Caracter *izq = nullptr;
             asignarHijos(&der, &izq);
-            auto* nodoDiv = new Mult(izq, der);
+            auto* nodoDiv = new Div(izq, der);
             stk.push(nodoDiv);
         } else {
             // Variable o constante
