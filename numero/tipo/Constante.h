@@ -11,7 +11,7 @@ class Constante : public Caracter {
 private:
     float constante;
 public:
-    Constante(float constante);
+    Constante(float constante_);
 
     float eval(const SymbolTab &syms) override;
 };

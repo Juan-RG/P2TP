@@ -6,8 +6,10 @@
 
 #include "../Operador.h"
 
-class Div : Operador {
+class Div : public Operador {
 public:
+
+    //Div(string op);
     virtual float eval(const SymbolTab &syms) override;
 };
 

@@ -7,7 +7,9 @@
 
 #include "../Operador.h"
 
-class Mult : Operador  {
+class Mult : public Operador  {
 public:
+
+    //Mult(string op);
     virtual float eval(const SymbolTab &syms) override;
 };

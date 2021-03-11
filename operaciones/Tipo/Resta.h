@@ -7,8 +7,10 @@
 
 #include "../Operador.h"
 
-class Resta : Operador {
+class Resta : public Operador {
 public:
+
+    //Resta(string op);
     virtual float eval(const SymbolTab &syms) override;
 };
 

@@ -3,3 +3,7 @@
 //
 
 #include "Caracter.h"
+
+int Caracter::getPrioridad() const{
+    return prioridad;
+}

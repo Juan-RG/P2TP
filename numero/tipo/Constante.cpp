@@ -5,7 +5,7 @@
 #include "Constante.h"
 
 
-Constante::Constante(float _constante): constante(_constante){
+Constante::Constante(float constante_): constante(constante_){
 }
 
 float Constante::eval(const SymbolTab &syms) {

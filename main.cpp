@@ -16,7 +16,7 @@ int main()
      float b = 2.0;
      //Consulta el tipo 'map' de la STL
 
-     Suma nodo1("+");
+     /*Suma nodo1("+");
      Suma nodo4("+");
 
      Constante nodo2(2);
@@ -28,7 +28,12 @@ int main()
      nodo1.setDer(&nodo4);
      nodo1.setIzq(&nodo3);
 
-     cout << nodo1.eval(syms) << "\n";
+     cout << nodo1.eval(syms) << "\n";*/
+
+    /*Expression e0("3 2 +");
+    cout << e0 << " = " << e0.eval(syms) << endl;
+    cout << endl;*/
+
     // 3 + 2 *  5 = 13
     Expression e1("3 2 5 * +");
     cout << e1 << " = " << e1.eval(syms) << endl;

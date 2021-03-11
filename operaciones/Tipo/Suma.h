@@ -4,12 +4,14 @@
 
 #pragma once
 
-
 #include "../Operador.h"
 
 class Suma : public Operador {
 public:
-    Suma(string op);
+
+    //Suma(string op);
+
+    Suma(Caracter* izq_, Caracter* der_);
     virtual float eval(const SymbolTab &syms) override;
 };
 

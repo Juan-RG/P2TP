@@ -6,23 +6,26 @@
 
 //#include "../Caracter.h"  toDo: Preguntar por que da error
 
-
 #include "../Caracter.h"
 
 class Operador : public Caracter {
 
 protected:
+
     string simbolo;
-    Caracter* der;
     Caracter* izq;
+    Caracter* der;
+
 public:
 
-    Operador(string op);
-    //virtual float eval(const SymbolTab &syms) override;
+    Operador(string simbolo_, Caracter* izq_, Caracter* der_);
+    //virtual float eval(const SymbolTab &syms) override; //TODO: hace falta???
+    virtual string to_String() override;
+    /*Operador(string op);
+
 
     void setDer(Caracter* CD);
-    void setIzq(Caracter* CI);
-
+    void setIzq(Caracter* CI);*/
 };
 
 
