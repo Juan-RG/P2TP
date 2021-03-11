@@ -30,9 +30,6 @@ int main()
 
      cout << nodo1.eval(syms) << "\n";*/
 
-    /*Expression e0("3 2 +");
-    cout << e0 << " = " << e0.eval(syms) << endl;
-    cout << endl;*/
 
     // 3 + 2 *  5 = 13
     Expression e1("3 2 5 * +");

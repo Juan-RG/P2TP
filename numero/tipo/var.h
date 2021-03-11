@@ -12,5 +12,4 @@ private:
 public:
     var(string variable_);
     float eval(const SymbolTab &syms) override;
-
 };

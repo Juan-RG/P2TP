@@ -7,3 +7,11 @@
 int Caracter::getPrioridad() const{
     return prioridad;
 }
+
+float Caracter::eval(const SymbolTab &syms) {
+    return 0;
+}
+
+string Caracter::to_String() {
+    return std::__cxx11::string();
+}

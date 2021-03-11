@@ -14,8 +14,8 @@ private:
 public:
 
     int getPrioridad() const;
-    virtual float eval(const SymbolTab& syms) = 0;
-    virtual string to_String() = 0;
+    virtual float eval(const SymbolTab& syms);
+    virtual string to_String();
 };
 
 

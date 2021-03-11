@@ -12,6 +12,5 @@ private:
     float constante;
 public:
     Constante(float constante_);
-
     float eval(const SymbolTab &syms) override;
 };

@@ -37,12 +37,10 @@ void Expression::parse(const string &s) {
     while (ss >> tok) {
         if (tok == "+") { //TODO: hay que desapilar dos datos de la pila, para pasarlos como nodos hijos
             // Apilar suma
-           /* Caracter c1(stk.top());
-            stk.pop();
-            Caracter c2(stk.top());
-            stk.pop();
-            Suma suma(c1, c2);
-            stk.push(suma);*/
+            Caracter* c1 = new Caracter(stk.top());
+            Caracter* c2 = new Caracter(stk.top());
+            Suma suma(c1,c2);
+            stk.push(suma);
         } else if (tok == "-") {
             // Apilar resta
             /*Resta resta(tok);
