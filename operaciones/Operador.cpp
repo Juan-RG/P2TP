@@ -4,16 +4,7 @@
 
 #include "Operador.h"
 
-/*Operador::Operador(string op) : simbolo(op){
-}
 
-void Operador::setDer(Caracter *CD) {
-    der = CD;
-}
-
-void Operador::setIzq(Caracter *CI) {
-    izq = CI;
-}*/
 
 //TODO: operador necesita constructor????
 Operador::Operador(string simbolo_, Caracter* izq_, Caracter* der_) : Caracter(2), simbolo(simbolo_), izq(izq_), der(der_) { }

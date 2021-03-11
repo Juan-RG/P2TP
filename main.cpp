@@ -15,7 +15,17 @@ int main()
      float a = 7.0;
      float b = 2.0;
 
-     //Consulta el tipo 'map' de la STL
+     pair<string,float>pareja;
+     pareja.first = "a";
+     pareja.second = a;
+     syms.insert(pareja);
+
+    pareja.first = "b";             //Todo: mirar el nombre
+    pareja.second = b;
+    syms.insert(pareja);
+
+
+    //Consulta el tipo 'map' de la STL
 
      /*Suma nodo1("+");
      Suma nodo4("+");
@@ -41,7 +51,7 @@ int main()
     Expression e2("3 2 + 5 *");
     cout << e2 << " = " << e2.eval(syms) << endl;
     cout << endl;
-/*
+
     // 3 - 2 * a = -11
     Expression e3("3 2 a * -");
     cout << e3 << " = " << e3.eval(syms) << endl;
@@ -61,6 +71,6 @@ int main()
     Expression e6("1 c + 2 *");
     cout << e6 << " = " << e6.eval(syms) << endl;
     cout << endl;
-*/
+
     return 0;
 }

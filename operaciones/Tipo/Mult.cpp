@@ -6,7 +6,7 @@
 
 float Mult::eval(const SymbolTab &syms) {
 
-    return  (der->eval(syms) * izq->eval(syms));
+    return  (izq->eval(syms) * der->eval(syms));
 }
 
 Mult::Mult(Caracter* izq_, Caracter* der_) : Operador("*", izq_, der_){
