@@ -10,7 +10,7 @@ var::var(string variable_): Caracter(3), variable(variable_){ }
 float var::eval(const SymbolTab &syms) const{
     if (syms.find(variable) == syms.end()){
         std::cerr << " ERROR!!!" +to_String() + "no esta definida";
-        exit(0);
+        exit(25);
     }
 
     return syms.find(variable)->second;

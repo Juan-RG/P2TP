@@ -11,15 +11,11 @@ int main(){
     float a = 7.0;
     float b = 2.0;
 
-    pair<string,float>pareja;
+    pair<string,float>var1("a",a);
+    syms.insert(var1);
 
-    pareja.first = "a";
-    pareja.second = a;
-    syms.insert(pareja);
-
-    pareja.first = "b";             //Todo: mirar el nombre
-    pareja.second = b;
-    syms.insert(pareja);
+    pair<string,float>var2("b",b);
+    syms.insert(var2);
 
     // 3 + 2 *  5 = 13
     Expression e1("3 2 5 * +");
