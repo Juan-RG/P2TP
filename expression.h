@@ -16,7 +16,6 @@ private:
 	void parse(const std::string& s);
 
 	std::string to_string() const;
-	void a(Caracter c1, Caracter c2);
 
     void asignarHijos(Caracter **der, Caracter **izq);
 

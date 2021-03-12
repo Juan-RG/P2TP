@@ -19,29 +19,24 @@ void Expression::parse(const string &s) {
     istringstream ss(s);
     string tok;
 
+    Caracter *der = nullptr;
+    Caracter *izq = nullptr;
+
     while (ss >> tok) {
         if (tok == "+") { //TODO: hay que desapilar dos datos de la pila, para pasarlos como nodos hijos
             // Apilar suma
-            Caracter* der = nullptr;
-            Caracter* izq = nullptr;
             asignarHijos(&der, &izq);
             auto* nodoSuma = new Suma(izq, der);
             stk.push(nodoSuma);
         } else if (tok == "-") {
-            Caracter *der = nullptr;
-            Caracter *izq = nullptr;
             asignarHijos(&der, &izq);
             auto* nodoResta = new Resta(izq, der);
             stk.push(nodoResta);
         } else if (tok == "*") {
-            Caracter *der = nullptr;
-            Caracter *izq = nullptr;
             asignarHijos(&der, &izq);
             auto* nodoMult = new Mult(izq, der);
             stk.push(nodoMult);
         } else if (tok == "/") {
-            Caracter *der = nullptr;
-            Caracter *izq = nullptr;
             asignarHijos(&der, &izq);
             auto* nodoDiv = new Div(izq, der);
             stk.push(nodoDiv);
