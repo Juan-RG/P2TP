@@ -4,8 +4,7 @@
 
 #include "Mult.h"
 
-Mult::Mult(Caracter* izq_, Caracter* der_) : Operador("*", izq_, der_){
-    prioridad = 2;
+Mult::Mult(Caracter* izq_, Caracter* der_) : Operador(2,  "*", izq_, der_){
 }
 
 float Mult::eval(const SymbolTab &syms) const{

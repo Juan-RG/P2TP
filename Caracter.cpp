@@ -15,5 +15,5 @@ float Caracter::eval(const SymbolTab &syms) const{
 }
 
 string Caracter::to_String() const{
-    return std::__cxx11::string();
+    return "";
 }

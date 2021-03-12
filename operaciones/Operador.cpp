@@ -4,11 +4,10 @@
 
 #include "Operador.h"
 
-//TODO: operador necesita constructor????
-Operador::Operador(string simbolo_, Caracter* izq_, Caracter* der_) : Caracter(2),
+Operador::Operador(int prioridad, string simbolo_, Caracter* izq_, Caracter* der_) : Caracter(prioridad),
                     simbolo(simbolo_), izq(izq_), der(der_) { }
 
-string Operador::to_String() const{  //TODO: es un string generalizado, vale para todas operaciones
+string Operador::to_String() const{
 
     if(prioridad > izq->getPrioridad()){
         return "(" + izq->to_String() + ") " + simbolo + der->to_String();

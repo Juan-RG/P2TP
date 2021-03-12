@@ -4,8 +4,7 @@
 
 #include "Suma.h"
 
-Suma::Suma(Caracter* izq_, Caracter* der_) : Operador("+", izq_, der_){
-    prioridad = 1;
+Suma::Suma(Caracter* izq_, Caracter* der_) : Operador(1,"+", izq_, der_){
 }
 
 float Suma::eval(const SymbolTab &syms) const{

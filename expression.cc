@@ -56,10 +56,15 @@ void Expression::parse(const string &s) {
             }
         }
     }
-    root = stk.top();   // Todo;	root = // cima de la pila
+    root = stk.top();
     stk.pop();
 }
 
+/**
+ * Metodo que asigna a cada hijo su valor correspondiente de la pila
+ * @param der
+ * @param izq
+ */
 void Expression::asignarHijos(Caracter **der, Caracter **izq) {
     *der = stk.top();
     stk.pop();
