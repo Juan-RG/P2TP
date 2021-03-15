@@ -1,5 +1,6 @@
 //
-// Created by Juan on 06/03/2021.
+// Autores: Juan Antonio Rodriguez Gracia y Miguel Beltran Pardos
+// NIA: 805001 y 800616
 //
 
 #include "Caracter.h"
@@ -14,6 +15,6 @@ float Caracter::eval(const SymbolTab &syms) const{
     return 0;
 }
 
-string Caracter::to_String() const{
+/*string Caracter::to_String() const{
     return "";
-}
+}*/

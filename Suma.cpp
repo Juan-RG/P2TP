@@ -1,5 +1,6 @@
 //
-// Created by Juan on 06/03/2021.
+// Autores: Juan Antonio Rodriguez Gracia y Miguel Beltran Pardos
+// NIA: 805001 y 800616
 //
 
 #include "Suma.h"

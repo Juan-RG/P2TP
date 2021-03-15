@@ -1,3 +1,8 @@
+//
+// Autores: Juan Antonio Rodriguez Gracia y Miguel Beltran Pardos
+// NIA: 805001 y 800616
+//
+
 #include "expression.h"
 #include "Suma.h"
 #include "Resta.h"

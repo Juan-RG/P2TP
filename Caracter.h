@@ -1,21 +1,27 @@
 //
-// Created by Juan on 06/03/2021.
+// Autores: Juan Antonio Rodriguez Gracia y Miguel Beltran Pardos
+// NIA: 805001 y 800616
 //
 
 #pragma once
 
 #include "symboltab.h"
 
-class Caracter {
+class Caracter {   //Clase base
 
 protected:
 
-    int prioridad; //las + y - tendran = 1; las * y / tendran = 2
+    int prioridad; //las + y - tendran = 1; las * y / tendran = 2; las ctes y var tendran = 3
 
 public:
+
+    //Constructor de la clase base:
     Caracter(int prioridad_);
-    virtual float eval(const SymbolTab& syms) const; //toDo: ¿clase abstracta??
-    virtual string to_String() const;
+    //Metodo sin definir que devuelve el valor del caracter: (se define comportamiento en clases hijas)
+    virtual float eval(const SymbolTab& syms) const;
+    //Metodo abstracto puro que devolvera un caracter dependiendo de la clase hija:
+    virtual string to_String() const = 0;
+    //Devuelve el atributo prioridad:
     int getPrioridad() const;
 
 };
