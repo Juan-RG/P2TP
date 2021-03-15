@@ -4,17 +4,17 @@
 
 #pragma once
 
-#include "../../Caracter.h"
+#include "Caracter.h"
 
-class var : public Caracter{
+class Constante : public Caracter {
 
 private:
 
-    string variable;
+    float constante;
 
 public:
 
-    var(string variable_);
+    Constante(float constante_);
     float eval(const SymbolTab &syms) const override;
     string to_String() const override;
 

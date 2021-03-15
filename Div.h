@@ -4,13 +4,16 @@
 
 #pragma once
 
-#include "../Operador.h"
+#include "Operador.h"
 
-class Mult : public Operador  {
+class Div : public Operador {
 
 public:
 
-    Mult(Caracter* izq_, Caracter* der_);
+    Div(Caracter* izq_, Caracter* der_);
     virtual float eval(const SymbolTab &syms) const override;
 
 };
+
+
+

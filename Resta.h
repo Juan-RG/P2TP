@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "../Operador.h"
+#include "Operador.h"
 
 class Resta : public Operador {
 

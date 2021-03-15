@@ -4,13 +4,13 @@
 
 #pragma once
 
-#include "../Operador.h"
+#include "Operador.h"
 
-class Div : public Operador {
+class Suma : public Operador {
 
 public:
 
-    Div(Caracter* izq_, Caracter* der_);
+    Suma(Caracter* izq_, Caracter* der_);
     virtual float eval(const SymbolTab &syms) const override;
 
 };

@@ -6,7 +6,7 @@
 
 //#include "../Caracter.h"  toDo: Preguntar por que da error
 
-#include "../Caracter.h"
+#include "Caracter.h"
 
 class Operador : public Caracter {
 

@@ -1,11 +1,11 @@
 #include "expression.h"
-#include "operaciones/Tipo/Suma.h"
-#include "operaciones/Tipo/Resta.h"
-#include "operaciones/Tipo/Div.h"
-#include "operaciones/Tipo/Mult.h"
+#include "Suma.h"
+#include "Resta.h"
+#include "Div.h"
+#include "Mult.h"
 
-#include "numero/tipo/Constante.h"
-#include "numero/tipo/var.h"
+#include "Constante.h"
+#include "var.h"
 
 #include <sstream>
 
